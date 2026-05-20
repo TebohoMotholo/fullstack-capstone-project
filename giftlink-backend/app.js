@@ -25,6 +25,9 @@ const searchRoutes = require('./routes/searchRoutes');
 
 const pinoHttp = require('pino-http');
 const logger = require('./logger');
+// In app.js
+const authRoutes = require('./routes/authRoutes');
+app.use('/api/auth', authRoutes);
 
 app.use(pinoHttp({ logger }));
 
